@@ -7,4 +7,4 @@ for i in range(N):
     chislo=input("Введите число")
     sum+=chislo
 else:
-    print "Среднее арифметическое =", round(1.0*sum/N)
+    print "Среднее арифметическое =", round(1.0*sum/N,3)
