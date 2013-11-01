@@ -11,29 +11,33 @@ while True:
     print "Завдання 6: Індикатор виконання"
     print "Завдання 7: Вивести прості числа"
     print "Завдання 8 ви спостерігаєте зараз", u"\u263a"
-    punkt=input(">>> Введіть номер пункту меню")
-    if punkt==1:
-        from math import pi
-        for i in range(1,11):
-            grad=int(i*180/pi)
-            min=int(((i*180/pi)-(i*180//pi))*60)
-            s=u'\u00b0'
-            print i, "rad =",grad, s, min,"'"
+    X=input(">>> Введіть номер пункту меню")
+    if X==1:
+        a=input('Введіть початок діапазону')
+        b=input('Введіть кінець діапазону')
+        x=0
+        for x in range(a,b):
+            x+=1
+            if x%7==0:
+        print x
     if X==2:
-        N=input("Введите количество чисел")
-        sum=0
-        for i in range(N):
-            chislo=input("Введите число")
-            sum+=chislo
-        else:
-            print "Среднее арифметическое =", round(1.0*sum/N,3)
+        n = input('Кількість елементів в мережі')
+        s = 0 #suma
+        for i in range(n):
+            a=input('opir')
+            i+= 1
+            s=a+i
+    print s
     if X==3:
-        from math import factorial
-        sum=0
+        suma=0
         for x in range(1,6):
-            for k in range(171):
-                sum+=(-1)**k*1.0*(k+1)*x**k/factorial(k)
-        print "Сумма =", sum
+            k=0
+            while k<141:
+                x=k
+                for i in range(1,k):
+                    suma+=((-1**k)*(x**k))*(1.0/k*3.0+k*((x+1)**1.0/2))
+                    k+=1
+        print 'suma',suma
     if X==4:
         i=10
         while i>0:
@@ -43,48 +47,41 @@ while True:
             i-=1
             print "There’ll be", i, "green bottles hanging on the wall."
     if X==5:
-        zena=input("Введите цену одного зерна")
-        zena2=zena
+        zerna=input("Введите вагу одного зерна")
+        zerna2=zerna
         suma1=0
-        for i in range(64):
-            print i+1,"=", zena
-            suma1+=zena
-            zena*=2
-        print "Сумма, полученная с помощью цикла",suma1
+            for i in range(64):
+            print i+1,"=", zerna
+            suma1+=zerna
+            zerna*=2
+        print 'suma vseh zeren',suma1
 
-        # Второй способ, без использования цикла
-        suma2=zena2*(1-2**64)/(1-2)
-        print "Сумма,  использованием геометрической прогресии", suma2
+        # Второй способ
+    zerna=input("Введите вагу одного зерна")
+    zerna2=zerna
+    suma1=0
+    suma2=zerna2*(1-2**64)/(1-2)
+    print "suma vseh zeren", suma2
     if X==6:
-        import sys
-        import time
-        s=u"\u2665"
-        s2=u"\u263a"
-        for x in range(101):
-            sys.stdout.flush()
-            sys.stdout.write('\rProgress: %3s %% %3s%3s' % (x,s*x,s2*(100-x)))
-            time.sleep(0.1)
+    dlina=input ('Vvedite dlinny indikatora ')
+    proc=input ('Procent zapolneniya ')
+    import sys
+    import time
+    s=u"\u2665"
+    s2=u"\u263a"
+    for x in range(dlina):
+        sys.stdout.flush()
+        sys.stdout.write('\rProgress: %3s %% %3s%3s' % (x,s*x,s2*(100-x)))
+        time.sleep(0.1)
     if X==7:
-        lst=[]
-        lst2=[]
-        for i in range(2,101):
-            lst.append(i)
-        print lst
-        i=2
-        while True:
-            j=i
-            a=0
-            while a < len(lst):
-                if (lst[a]%j)==0:
-                    del lst[a]
-                a+=1
-            if len(lst)==0:
-                break
-            i=lst[0]
-            lst2.append(i)
-        print lst2
-    if X==8:
-        break
-    else:
+        def Primes(N):
+        primes = [i for i in range(1, N+1)]
+        primes[0] = 0
+        for i in xrange(0, N):
+            if primes[i] != 0:
+                for j in xrange(i+primes[i],N,primes[i]):
+                    primes[j] = 0
+        return [x for x in primes if x != 0]
+    print Primes(102)    
         print"Оберіть пункт від 1 до 8"
         continue
