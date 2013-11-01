@@ -1,5 +1,5 @@
 # *-* coding: utf-8 *-*
-# Меню програми
+# Меню програм
 
 while True:
     print ">>> Головне меню"
@@ -32,7 +32,7 @@ while True:
         suma=0
         for x in range(1,6):
             k=0
-            while k<141:
+            while k<10:
                 x=k
                 for i in range(1,k):
                     suma+=((-1**k)*(x**k))*(1.0/k*3.0+k*((x+1)**1.0/2))
@@ -56,7 +56,7 @@ while True:
             zerna*=2
         print 'suma vseh zeren',suma1
 
-        # Второй способ
+        print 'Второй способ'
         zerna=input("Введите вагу одного зерна")
         zerna2=zerna
         suma1=0
@@ -82,7 +82,7 @@ while True:
                     for j in xrange(i+primes[i],N,primes[i]):
                         primes[j] = 0
             return [x for x in primes if x != 0]
-            print Primes(102)
+        print Primes(102)
     else:
         print"Оберіть пункт від 1 до 8"
         continue
