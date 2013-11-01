@@ -19,7 +19,7 @@ while True:
         for x in range(a,b):
             x+=1
             if x%7==0:
-        print x
+                print x
     if X==2:
         n = input('Кількість елементів в мережі')
         s = 0 #suma
@@ -27,7 +27,7 @@ while True:
             a=input('opir')
             i+= 1
             s=a+i
-    print s
+            print s
     if X==3:
         suma=0
         for x in range(1,6):
@@ -50,38 +50,39 @@ while True:
         zerna=input("Введите вагу одного зерна")
         zerna2=zerna
         suma1=0
-            for i in range(64):
+        for i in range(64):
             print i+1,"=", zerna
             suma1+=zerna
             zerna*=2
         print 'suma vseh zeren',suma1
 
         # Второй способ
-    zerna=input("Введите вагу одного зерна")
-    zerna2=zerna
-    suma1=0
-    suma2=zerna2*(1-2**64)/(1-2)
-    print "suma vseh zeren", suma2
+        zerna=input("Введите вагу одного зерна")
+        zerna2=zerna
+        suma1=0
+        suma2=zerna2*(1-2**64)/(1-2)
+        print "suma vseh zeren", suma2
     if X==6:
-    dlina=input ('Vvedite dlinny indikatora ')
-    proc=input ('Procent zapolneniya ')
-    import sys
-    import time
-    s=u"\u2665"
-    s2=u"\u263a"
-    for x in range(dlina):
-        sys.stdout.flush()
-        sys.stdout.write('\rProgress: %3s %% %3s%3s' % (x,s*x,s2*(100-x)))
-        time.sleep(0.1)
+        dlina=input ('Vvedite dlinny indikatora ')
+        proc=input ('Procent zapolneniya ')
+        import sys
+        import time
+        s=u"\u2665"
+        s2=u"\u263a"
+        for x in range(dlina):
+            sys.stdout.flush()
+            sys.stdout.write('\rProgress: %3s %% %3s%3s' % (x,s*x,s2*(100-x)))
+            time.sleep(0.1)
     if X==7:
         def Primes(N):
-        primes = [i for i in range(1, N+1)]
-        primes[0] = 0
-        for i in xrange(0, N):
-            if primes[i] != 0:
-                for j in xrange(i+primes[i],N,primes[i]):
-                    primes[j] = 0
-        return [x for x in primes if x != 0]
-    print Primes(102)    
+            primes = [i for i in range(1, N+1)]
+            primes[0] = 0
+            for i in xrange(0, N):
+                if primes[i] != 0:
+                    for j in xrange(i+primes[i],N,primes[i]):
+                        primes[j] = 0
+            return [x for x in primes if x != 0]
+            print Primes(102)
+    else:
         print"Оберіть пункт від 1 до 8"
         continue
