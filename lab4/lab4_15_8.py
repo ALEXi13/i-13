@@ -72,6 +72,8 @@ while True:
         print lst
         i=2
         while True:
+            i=lst[0]
+            lst2.append(i)
             j=i
             a=0
             while a < len(lst):
@@ -80,8 +82,6 @@ while True:
                 a+=1
             if len(lst)==0:
                 break
-            i=lst[0]
-            lst2.append(i)
         print lst2
     if X==8:
         break
