@@ -85,4 +85,4 @@ while True:
         print Primes(102)
     else:
         print"Оберіть пункт від 1 до 8"
-        continue
+            continue
