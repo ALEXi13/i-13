@@ -23,11 +23,11 @@ while True:
     if X==2:
         n = input('Кількість елементів в мережі')
         s = 0 #suma
-        for i in range(n):
+            for i in range(n):
             a=input('opir')
             i+= 1
             s=a+i
-            print s
+        print s
     if X==3:
         suma=0
         for x in range(1,6):
